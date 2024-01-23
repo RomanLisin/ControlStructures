@@ -2,11 +2,11 @@
 #include<iostream>
 using namespace std;
 
-//Коментарии - это, код который игнорируется компилятором.
-//Бывают:
-// Строчный комментарий
-/*И
-* Блочный комментарий
+//Comments are code that is ignored by the compiler.
+//There are:
+// Line comment
+/* and
+* Block comment
 */
 
 void main() 
