@@ -15,7 +15,7 @@ void main()
 
 	cout << "Hello controls" << endl;
 	int temperature;
-	cout << "Введите температуру воздуха: "; cin >> temperature;
+	cout << "Enter air temperature: "; cin >> temperature;
 	/*if (temperature > 0)
 	{
 		cout << "На улице тепло" << endl;
@@ -28,39 +28,39 @@ void main()
 
 	if (temperature > 60)
 	{
-		cout << "Вы на другой планете" << endl;
+		cout << "You are on another planet" << endl;
 
 	}
 	else if (temperature > 35)
 	{
-		cout << "Очень жарко" << endl;
+		cout << "Very hot" << endl;
 	}
 	else if (temperature > 25)
 	{
-		cout << "Жарко" << endl;
+		cout << "Hot" << endl;
 	}
 	else if (temperature > 15)
 	{
-		cout << "Тепло" << endl;
+		cout << "Warm" << endl;
 	}
 	else if (temperature > 0)
 	{
-		cout << "Прохладно" << endl;
+		cout << "Chilly" << endl;
 	}
 	else if (temperature > -10)
 	{
-		cout << "Холодно" << endl;
+		cout << "Cold" << endl;
 	}
 	else if (temperature > -20)
 	{
-		cout << "Мороз" << endl;
+		cout << "Freezing" << endl;
 	}
 	else if (temperature > -40)
 	{
-		cout << "Сильный мороз" << endl;
+		cout << "Severe frost" << endl;
 	}
 	else
 	{
-		cout << "Капец" << endl;
+		cout << "Fucking frost" << endl;
 	}
 }

@@ -35,7 +35,7 @@ void main() {
 #ifdef ASCII_TABLE
 	setlocale(LC_ALL, "C");
 	const int numRows = 30;
-	int numCols = 255 / numRows + 1; // Количество столбцов на один больше, чем кол-во полностью заполненных записями
+	int numCols = 255 / numRows + 1; // The number of columns is one more than the number of completely filled records
 	cout << "ASCII table" << endl;
 	int currentValue;
 	for (int row = 0; row < numRows; row++) {
@@ -54,8 +54,8 @@ void main() {
 #endif // ASCII_TABLE 
 
 #ifdef ASCII_TWO
-	cout << "Таблица ASCII-символов:\n";
-	setlocale(LC_ALL, "C"); //включаем кодировку по умолчанию
+	cout << "Table ASCII-key:\n";
+	setlocale(LC_ALL, "C"); //enable default encoding
 	for (int i = 0; i < 256; i++)
 	{
 		if (i % 16 == 0) cout << endl;
@@ -63,7 +63,7 @@ void main() {
 	}
 	cout << endl;
 	setlocale(LC_ALL,"");
-	cout << "Конец";
+	cout << "End";
 
 #endif // ASCII_TWO
 

@@ -15,10 +15,11 @@ using std::endl;
 //#define PLUSMINUSSQUARE
 //#define CHESS
 //#define CHESS_EXTAND 
-//#define CHESS_EXTAND_TWO_FOR
+//#define CHESS_EXTAND_TWO_FOR_PARITY
+//#difine CHESS_EXTAND_TWO_FOR_MULTIPLICITY
 //#define TRIANGLE_PASCAL
-//#define TRIANGLE_PASCAL_2
-//#define TRIANGLE_PASCAL_3_BEST
+//#define TRIANGLE_PASCAL_FACTORIAL
+#define TRIANGLE_PASCAL_3_BEST
 
 #define INPUT cout << "Enter figure size: "; cin >> n;
 #define INPUT_DESK cout << "Enter board size: "; cin >> n;
@@ -152,7 +153,7 @@ void main() {
 
 #endif // CHESS_EXTAND
 
-#ifdef CHESS_EXTAND_TWO_FOR
+#ifdef CHESS_EXTAND_TWO_FOR_PARITY
 	INPUT_DESK
 		cout << endl;
 	int r = 1;
@@ -168,8 +169,9 @@ void main() {
 		if (!(i % n)) r++; // if the square ends on the down
 		cout << endl;
 	}
-#endif // CHESS_EXTAND_TWO_FOR
+#endif // CHESS_EXTAND_TWO_FOR_PARITY
 
+#ifdef CHESS_EXTAND_TWO_FOR_MULTIPLICITY
 	INPUT_DESK
 		cout << endl;
 	/*
@@ -186,15 +188,17 @@ void main() {
 	for (int i = 0; i < n * n; i++) {
 		for (int j = 0; j < n * n; j++)
 
-			cout << (((i/n +j/n) % 2) ? "  " : "* ");
+			cout << (((i / n + j / n) % 2) ? "  " : "* ");
 
 		cout << endl;
 	}
+#endif // CHESS_EXTAND_TWO_FOR_MULTIPLICITY
+
 
 
 #ifdef TRIANGLE_PASCAL
 	INPUT
-	long long Ck = 1;
+		long long Ck = 1;
 	long long Cm = 1;
 	long long Ck_m = 1;
 	long long C = 1;
@@ -209,11 +213,11 @@ void main() {
 		f1 = f2;
 		f2 = f0 + f1;
 	}
-	do{
+	do {
 		f1 /= 10;
 		wide++;
 	} while (f1 != 0);
-	
+
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = i; j < n; j++)std::cout << " ";
@@ -225,23 +229,23 @@ void main() {
 			C = 1;
 			Cwide = 0;
 			for (int k = 1; k <= j; k++)Ck *= k;
-			for (int m = 1; m <= i; m++)Cm*= m;
+			for (int m = 1; m <= i; m++)Cm *= m;
 			for (int km = 1; km <= (i - j); km++)Ck_m *= km;
-			C= Cm / (Ck * Ck_m);
+			C = Cm / (Ck * Ck_m);
 			while (C != 0) {
 				C /= 10;
-				Cwide++; // 
+				Cwide++; // Calculate the digits number
 			}
 			std::cout << Cm / (Ck * Ck_m);
 			for (int s = 0; s <= ((wide - Cwide)); s++)std::cout << " ";
-		}	
+		}
 		std::cout << endl;
 	}
 #endif // TRIANGLE_PASCAL
 
-	
 
-#ifdef TRIANGLE_PASCAL_2
+
+#ifdef TRIANGLE_PASCAL_FACTORIAL
 	INPUT
 
 		int wide = 0;
@@ -253,7 +257,7 @@ void main() {
 		f2 = f0 + f1;
 	}
 
-	// optimizaation: calculate the width in advance, use log10
+	// optimizaation: calculate the width advance 
 	while (f1 != 0) {
 		f1 /= 10;
 		wide++;
@@ -279,21 +283,22 @@ void main() {
 		}
 		cout << endl;
 	}
-#endif // TRIANGLE_PASCAL_2
+#endif // TRIANGLE_PASCAL_FACTORIAL
 
 
 #ifdef TRIANLE_PASCAL_3_BEST
 	INPUT
+	//  Use coefficients from binomial distribution.
 
-		// Print Pascal's Triangle
-		for (int i = 0; i < n; i++) {
-			int coef = 1;
-			for (int j = 0; j <= i; j++) {
-				std::cout << coef << " ";
-				coef = coef * (i - j) / (j + 1);
-			}
-			std::cout << std::endl;
+	for (int i = 0; i < n; i++) {
+		int coef = 1; //  coefficient for calculating binomial coefficients.
+		for (int j = 0; j <= i; j++) {
+			cout << coef << " "; 
+			// Updating the coefficient for the next element in the row.
+			coef = coef * (i - j) / (j + 1);
 		}
+		cout << endl;
+	}
 #endif // TRIANLE_PASCAL_3_BEST
 
 
