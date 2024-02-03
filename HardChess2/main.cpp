@@ -19,8 +19,17 @@ void main() {
 	--------------------------------
 		~ NOT
 		| OR
-	
-	
-	
+		& AND
+		^ XOR
+		<< SHL (Shift left)
+		>> SHR (Shift right)
+	--------------------------------
+		~=  NOT Assign
+		|=   OR Assign
+		&=  AND Assign
+		^=  XOR Assign
+		<<= 
+		>>=
+	--------------------------------
 	*/
 }
