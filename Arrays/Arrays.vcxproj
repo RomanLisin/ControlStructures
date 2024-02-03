@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{69ac2d55-7f65-42b1-9bcf-d6bff431aaad}</ProjectGuid>
-    <RootNamespace>HardChess22</RootNamespace>
+    <ProjectGuid>{311e0111-968d-42aa-bdcb-c7b12a69865b}</ProjectGuid>
+    <RootNamespace>Arrays</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
