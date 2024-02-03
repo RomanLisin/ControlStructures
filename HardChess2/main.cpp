@@ -1,11 +1,11 @@
-//HardChess2
+п»ї//HardChess2
 #include<iostream>
 using namespace std;
 
 void main() {
 	setlocale(LC_ALL, "");
-	int n; // определяет размер как одной клетки, так и всей доски
-	cout << "Введите размер доски: "; cin >> n;
+	int n; // РѕРїСЂРµРґРµР»СЏРµС‚ СЂР°Р·РјРµСЂ РєР°Рє РѕРґРЅРѕР№ РєР»РµС‚РєРё, С‚Р°Рє Рё РІСЃРµР№ РґРѕСЃРєРё
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РґРѕСЃРєРё: "; cin >> n;
 	for (int i = 0; i < n * n; i++)
 	{
 		for (int j = 0; j < n * n; j++)
