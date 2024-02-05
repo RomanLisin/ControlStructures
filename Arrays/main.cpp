@@ -21,30 +21,33 @@ void main() {
 	const int N=6;
 	int a[N];
 	int sum = 0;
-	int Max;
-	int Min;
+	int Max, Min;
+	float Avr;
 	
 	for (int i = 0; i < N; i++) {
 		cout << "Введите значение элемента " << i+1 << ": ";
 		cin >> a[i];
 		NWL;
 	}
+
 	Max = Min = a[0];
+
 	for (int i = 0; i < N; i++) {
-		cout << a[i] << "\t"; // вывод в прямом порядке
-		if (Max < a[i]) Max = a[i];   // подсчёт максимального элемента
-		if (Min > a[i]) Min = a[i];   // подсчёт минимального элемента
+		cout << a[i] << "\t";		     // вывод в прямом порядке
+		if (Max < a[i]) Max = a[i];      // подсчёт максимального элемента
+		if (Min > a[i]) Min = a[i];      // подсчёт минимального элемента
 	}
 	NWL; NWL;
 
 	for(int i = N-1; i>= 0; i--) {
-		cout << a[i] << "\t";   // вывод в обратном порядке
-		sum += a[i];
+		cout << a[i] << "\t";			 // вывод в обратном порядке
+		sum += a[i];					 // сумма
 	}
 	NWL; NWL;
 
+	Avr = (float)sum / N;
 	cout << "Сумма всех элементов равна: " << sum; NWL; NWL;
-	cout << "Среднеарифметическое всех элементов массива равно: " << (float)sum / N; NWL; NWL;
+	cout << "Среднеарифметическое всех элементов массива равно: " << Avr ; NWL; NWL;
 	cout << "Максимальное значение: " << Max << endl; NWL;
 	cout << "Минимальное значение: " << Min << endl;
 
